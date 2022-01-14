@@ -1,0 +1,989 @@
+[
+  {
+    "region": "Asia",
+    "country": "Afghanistan",
+    "currency": "AFN Afghan Afghani"
+  },
+  {
+    "region": "East Europe",
+    "country": "Albania",
+    "currency": "ALL Albanian lek"
+  },
+  {
+    "region": "Africa",
+    "country": "Algeria",
+    "currency": "DZD Algerian dinar"
+  },
+  {
+    "country": "American Samoa",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Andorra",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Angola",
+    "currency": "AOA Angolan kwanza"
+  },
+  {
+    "country": "Anguilla",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Antigua and Barbuda",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Argentina",
+    "currency": "ARS Argentine peso"
+  },
+  {
+    "region": "East Europe",
+    "country": "Armenia",
+    "currency": "AMD Armenian dram"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Aruba",
+    "currency": "AWG Aruban guilder"
+  },
+  {
+    "region": "Pacific",
+    "country": "Australia",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Austria",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "East Europe",
+    "country": "Azerbaijan",
+    "currency": "AZN New azerbaijani Manat"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Bahamas",
+    "currency": "BSD Bahamian dollar"
+  },
+  {
+    "region": "Middle East",
+    "country": "Bahrain",
+    "currency": "BHD Bahraini dinar"
+  },
+  {
+    "country": "Banglades",
+    "currency": "BDT Bangladeshi taka"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Barbados",
+    "currency": "BBD Barbados dollar"
+  },
+  {
+    "region": "East Europe",
+    "country": "Belarus",
+    "currency": "BYN Belarusian ruble"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Belgium",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Belize",
+    "currency": "BZD Belize dollar"
+  },
+  {
+    "region": "Africa",
+    "country": "Benin",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Bermuda",
+    "currency": "BMD Bermudian dollar"
+  },
+  {
+    "region": "Asia",
+    "country": "Bhutan",
+    "currency": "BTN Bhutanese ngultrum"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Bolivia",
+    "currency": "BOB Boliviano"
+  },
+  {
+    "country": "Bosnia-Herzegovina",
+    "currency": "BAM Convertible mark"
+  },
+  {
+    "region": "Africa",
+    "country": "Botswana",
+    "currency": "BWP Botswana pula"
+  },
+  {
+    "region": "Antarctica",
+    "country": "Bouvet Island",
+    "currency": "NOK Norwegian krone"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Brazil",
+    "currency": "BRL Brazilian real"
+  },
+  {
+    "region": "Asia",
+    "country": "British Indian O. Terr.",
+    "currency": "GBP Pound sterling"
+  },
+  {
+    "region": "Caraibes",
+    "country": "British Virgin Islands",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Middle East",
+    "country": "Brunei Darussalam",
+    "currency": "BND Brunei dollar"
+  },
+  {
+    "region": "East Europe",
+    "country": "Bulgaria",
+    "currency": "BGN Bulgarian lev"
+  },
+  {
+    "region": "Africa",
+    "country": "Burkina Faso",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "country": "Burundi",
+    "currency": "BIF Burundian franc"
+  },
+  {
+    "region": "Asia",
+    "country": "Cambodia",
+    "currency": "KHR Cambodian riel"
+  },
+  {
+    "region": "Africa",
+    "country": "Cameroon",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "North America",
+    "country": "Canada",
+    "currency": "CAD Canadian dollar"
+  },
+  {
+    "region": "Africa",
+    "country": "Cape Verde",
+    "currency": "CVE Cape Verde escudo"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Cayman Islands",
+    "currency": "KYD Cayman Islands dollar"
+  },
+  {
+    "region": "Africa",
+    "country": "Central African Rep.",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "Africa",
+    "country": "Chad",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Chile",
+    "currency": "CLP Chilean peso"
+  },
+  {
+    "region": "Asia",
+    "country": "China",
+    "currency": "CNY Chinese yuan renminbi (RMB)"
+  },
+  {
+    "region": "Pacific",
+    "country": "Christmas Island",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "Pacific",
+    "country": "Cocos (Keeling) Islands",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Colombia",
+    "currency": "COP Colombian peso"
+  },
+  {
+    "country": "Comoros",
+    "currency": "KMF Comoro franc"
+  },
+  {
+    "region": "Africa",
+    "country": "Congo (Brazzaville)",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "Pacific",
+    "country": "Cook Islands",
+    "currency": "NZD New Zealand dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Costa Rica",
+    "currency": "CRC Costa Rican colon"
+  },
+  {
+    "region": "East Europe",
+    "country": "Croatia",
+    "currency": "HRK Croatian kuna"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Cuba",
+    "currency": "CUC Cuban convertible Peso"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Cyprus",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "East Europe",
+    "country": "Czech Republic",
+    "currency": "CZK Czech koruna"
+  },
+  {
+    "region": "Africa",
+    "country": "Democratic Republic of Congo (Kinshasa-Zaire)",
+    "currency": "CDF Congolese franc"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Denmark",
+    "currency": "DKK Danish krone"
+  },
+  {
+    "region": "Africa",
+    "country": "Djibouti",
+    "currency": "DJF Djiboutian franc"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Dominica",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Dominican Republic",
+    "currency": "DOP Dominican peso"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Ecuador",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Middle East",
+    "country": "Egypt",
+    "currency": "EGP Egyptian pound"
+  },
+  {
+    "region": "South and Central America",
+    "country": "El Salvador",
+    "currency": "SVC Salvadoran colon"
+  },
+  {
+    "country": "Eritrea",
+    "currency": "ERN Eritrean nakfa"
+  },
+  {
+    "region": "East Europe",
+    "country": "Estonia",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Ethiopia",
+    "currency": "ETB Ethipian birr"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "European Union",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Antarctica",
+    "country": "Falkland Isl., Malvinas",
+    "currency": "FKP Falkland Islands pound"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Faroe Islands",
+    "currency": "DKK Danish krone"
+  },
+  {
+    "region": "Pacific",
+    "country": "Fiji",
+    "currency": "FJD Fiji dollar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Finland",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "France",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "France, Metropolitan",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "South and Central America",
+    "country": "French Guiana",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Pacific",
+    "country": "French Polynesia",
+    "currency": "XPF French pacific franc"
+  },
+  {
+    "region": "Antarctica",
+    "country": "French Southern Terr.",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Gabon",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "Africa",
+    "country": "Gambia",
+    "currency": "GMD Gambian dalasi"
+  },
+  {
+    "region": "East Europe",
+    "country": "Georgia",
+    "currency": "GEL Georgian lari"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Germany",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Ghana",
+    "currency": "GHS Ghanaian Cedi"
+  },
+  {
+    "country": "Gibraltar",
+    "currency": "GIP Gibraltar pound"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Great Britain - UK",
+    "currency": "GBP Pound sterling"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Greece",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "North America",
+    "country": "Greenland (Denmark)",
+    "currency": "DKK Danish krone"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Grenada",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Guadaloupe",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Asia",
+    "country": "Guam (US)",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Guatemala",
+    "currency": "GTQ Guatemalan quetzal"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Guernsey",
+    "currency": "GGP Guernsey Pound"
+  },
+  {
+    "region": "Africa",
+    "country": "Guinea (Conakry)",
+    "currency": "GNF Guinean franc"
+  },
+  {
+    "region": "Africa",
+    "country": "Guinea Bissau",
+    "currency": "XAF CFA Franc BEAC"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Guyana",
+    "currency": "GYD Guyanese dollar"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Haiti",
+    "currency": "HTG Haitian gourde"
+  },
+  {
+    "country": "Heard and McDonald Isl.",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Honduras",
+    "currency": "HNL Honduran lempira"
+  },
+  {
+    "region": "Asia",
+    "country": "Hong Kong",
+    "currency": "HKD Hong Kong dollar"
+  },
+  {
+    "region": "East Europe",
+    "country": "Hungary",
+    "currency": "HUF Hungarian forint"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Iceland",
+    "currency": "ISK Icelandic krona"
+  },
+  {
+    "region": "Asia",
+    "country": "India",
+    "currency": "INR Indian rupee"
+  },
+  {
+    "region": "Asia",
+    "country": "Indonesia",
+    "currency": "IDR Indonesian rupiah"
+  },
+  {
+    "region": "Middle East",
+    "country": "Iran",
+    "currency": "IRR Iranian rial"
+  },
+  {
+    "region": "Middle East",
+    "country": "Iraq",
+    "currency": "IQD Iraqi dinar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Ireland",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Isle of Man",
+    "currency": "IMP Manx pound"
+  },
+  {
+    "region": "Middle East",
+    "country": "Israel",
+    "currency": "ILS Israeli new shekel"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Italy",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Ivory Coast",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Jamaica",
+    "currency": "JMD Jamaican dollar"
+  },
+  {
+    "region": "Asia",
+    "country": "Japan",
+    "currency": "JPY Japanese yen"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Jersey",
+    "currency": "JEP Jersey pound"
+  },
+  {
+    "region": "Middle East",
+    "country": "Jordan",
+    "currency": "JOD Jordanian dinar"
+  },
+  {
+    "region": "Asia",
+    "country": "Kazakhstan",
+    "currency": "KZT Kazakhstani tenge"
+  },
+  {
+    "region": "Africa",
+    "country": "Kenya",
+    "currency": "KES Kenyan shilling"
+  },
+  {
+    "country": "Kiribati",
+    "currency": "KID Kiribati dollar"
+  },
+  {
+    "region": "Middle East",
+    "country": "Kuwait",
+    "currency": "KWD Kuwaiti dinar"
+  },
+  {
+    "region": "Asia",
+    "country": "Kyrgyz Republic",
+    "currency": "KGS Kyrgyzstani som"
+  },
+  {
+    "region": "Asia",
+    "country": "Laos",
+    "currency": "LAK Lao kip"
+  },
+  {
+    "region": "East Europe",
+    "country": "Latvia",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Middle East",
+    "country": "Lebanon",
+    "currency": "LBP Lebanese pound"
+  },
+  {
+    "region": "Africa",
+    "country": "Lesotho",
+    "currency": "LSL Lesotho loti"
+  },
+  {
+    "region": "Africa",
+    "country": "Liberia",
+    "currency": "LRD Liberian dollar"
+  },
+  {
+    "region": "Africa",
+    "country": "Libya",
+    "currency": "LYD Libyan dinar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Liechtenstein",
+    "currency": "CHF Swiss franc"
+  },
+  {
+    "region": "East Europe",
+    "country": "Lithuania",
+    "currency": "LTL Lithuanian litas"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Luxembourg",
+    "currency": "EUR Euro"
+  },
+  {
+    "country": "Macau",
+    "currency": "MOP Macanese pataca"
+  },
+  {
+    "region": "East Europe",
+    "country": "Macedonia",
+    "currency": "MKD Macedonian denar"
+  },
+  {
+    "region": "Africa",
+    "country": "Madagascar",
+    "currency": "MGA Malagasy ariayry"
+  },
+  {
+    "region": "Africa",
+    "country": "Malawi",
+    "currency": "MWK Malawian kwacha"
+  },
+  {
+    "region": "Asia",
+    "country": "Malaysia",
+    "currency": "MYR Malaysian ringgit"
+  },
+  {
+    "region": "Asia",
+    "country": "Maldives",
+    "currency": "MVR Maldivian rufiyaa"
+  },
+  {
+    "region": "Africa",
+    "country": "Mali",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Malta",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Asia",
+    "country": "Marshall Islands",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Martinique",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Africa",
+    "country": "Mauritania",
+    "currency": "MRU Mauritanian ouguiya"
+  },
+  {
+    "region": "Africa",
+    "country": "Mauritius",
+    "currency": "MUR Mauritian rupee"
+  },
+  {
+    "region": "Africa",
+    "country": "Mayotte",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Mexico",
+    "currency": "MXN Mexican peso"
+  },
+  {
+    "region": "Pacific",
+    "country": "Micronesia",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Moldova",
+    "currency": "MDL Moldovan leu"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Monaco",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Asia",
+    "country": "Mongolia",
+    "currency": "MNT Mongolian tugrik"
+  },
+  {
+    "region": "East Europe",
+    "country": "Montenegro",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Montserrat",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "Africa",
+    "country": "Morocco",
+    "currency": "Malawian"
+  },
+  {
+    "region": "Africa",
+    "country": "Mozambique",
+    "currency": "MZN Mozambican metical"
+  },
+  {
+    "region": "Asia",
+    "country": "Myanmar",
+    "currency": "MMK Myanma kyat"
+  },
+  {
+    "region": "Africa",
+    "country": "Namibia",
+    "currency": "NAD Namibian dollar"
+  },
+  {
+    "country": "Nauru",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "Asia",
+    "country": "Nepal",
+    "currency": "NPR Nepalese rupee"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Netherland Antilles",
+    "currency": "ANG Netherlands Antillean guilder"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Netherlands",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Pacific",
+    "country": "New Caledonia",
+    "currency": "XPF French pacific franc"
+  },
+  {
+    "region": "Pacific",
+    "country": "New Zealand",
+    "currency": "NZD New Zealand dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Nicaragua",
+    "currency": "NIO Nicaraguan córdoba"
+  },
+  {
+    "region": "Africa",
+    "country": "Niger",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "region": "Africa",
+    "country": "Nigeria",
+    "currency": "NGN Nigerian naira"
+  },
+  {
+    "region": "Pacific",
+    "country": "Niue",
+    "currency": "NZD New Zealand dollar"
+  },
+  {
+    "region": "Pacific",
+    "country": "Norfolk Island",
+    "currency": "AUD Australian dollar"
+  },
+  {
+    "region": "Asia",
+    "country": "North Korea",
+    "currency": "KPW North Korean won"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Norway",
+    "currency": "NOK Norwegian krone"
+  },
+  {
+    "region": "Middle East",
+    "country": "Oman",
+    "currency": "OMR Omani rial"
+  },
+  {
+    "region": "Asia",
+    "country": "Pakistan",
+    "currency": "PKR Pakistani rupee"
+  },
+  {
+    "region": "Middle East",
+    "country": "Palestine",
+    "currency": "ILS Israeli new shekel"
+  },
+  {
+    "region": "Pacific",
+    "country": "Panama",
+    "currency": "PAB Panamanian balboa"
+  },
+  {
+    "region": "Asia",
+    "country": "Papua New Guinea",
+    "currency": "PGK Papua New Guinean kina"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Paraguay",
+    "currency": "PYG Paraguayan guaraní"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Peru",
+    "currency": "PEN Peruvian nuevo sol"
+  },
+  {
+    "region": "Asia",
+    "country": "Philippines",
+    "currency": "PHP Philippine peso"
+  },
+  {
+    "region": "Pacific",
+    "country": "Pitcairn",
+    "currency": "NZD New Zealand dollar"
+  },
+  {
+    "region": "East Europe",
+    "country": "Poland",
+    "currency": "PLN Polish zloty"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Portugal",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Caraibes",
+    "country": "Puerto Rico",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "Middle East",
+    "country": "Qatar",
+    "currency": "QAR Qatari riyal"
+  },
+  {
+    "region": "Africa",
+    "country": "Reunion",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "East Europe",
+    "country": "Romania",
+    "currency": "RON Romanian new Leu"
+  },
+  {
+    "region": "East Europe",
+    "country": "Russian Federation",
+    "currency": "RUB Russian ruble"
+  },
+  {
+    "region": "Africa",
+    "country": "Rwanda",
+    "currency": "RWF Rwandan franc"
+  },
+  {
+    "country": "Saint Lucia",
+    "currency": "XCD East Caribbean dollar"
+  },
+  {
+    "region": "North America",
+    "country": "Saint Pierre and Miquelon",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "San Marino",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Middle East",
+    "country": "Saudi Arabia",
+    "currency": "SAR Saudi riyal"
+  },
+  {
+    "region": "Africa",
+    "country": "Senegal",
+    "currency": "XOF CFA Franc BCEAO"
+  },
+  {
+    "region": "East Europe",
+    "country": "Serbia",
+    "currency": "RSD Serbian dinar"
+  },
+  {
+    "region": "East Europe",
+    "country": "Slovakia",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "East Europe",
+    "country": "Slovenia",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Asia",
+    "country": "South Korea",
+    "currency": "KRW South Korean won"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Spain",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Switzerland",
+    "currency": "CHF Swiss franc"
+  },
+  {
+    "region": "East Europe",
+    "country": "Ukraine",
+    "currency": "UAH Ukrainian hryvnia"
+  },
+  {
+    "region": "Middle East",
+    "country": "United Arab Emirates",
+    "currency": "AED UAE dirham"
+  },
+  {
+    "region": "North America",
+    "country": "United States",
+    "currency": "USD US dollar"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Uruguay",
+    "currency": "UYU Urugayan peso"
+  },
+  {
+    "region": "Asia",
+    "country": "Uzbekistan",
+    "currency": "UZS Uzbekitan som"
+  },
+  {
+    "region": "Occidental Europe",
+    "country": "Vatican City State",
+    "currency": "EUR Euro"
+  },
+  {
+    "region": "South and Central America",
+    "country": "Venezuela",
+    "currency": "VES sovereign bolivar"
+  },
+  {
+    "region": "Asia",
+    "country": "Vietnam",
+    "currency": "VND Vietnamese dong"
+  },
+  {
+    "region": "Africa",
+    "country": "Western Sahara",
+    "currency": "MAD Moroccan dirham"
+  }
+]
