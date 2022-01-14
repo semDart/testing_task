@@ -1,16 +1,38 @@
-const fs = require("fs");
-const path = require("path");
+const faker = require("@faker-js/faker");
 
 module.exports = class Travel {
   static fetchAll() {
-    const p = path.join(
-      path.dirname(process.mainModule.filename),
-      "data",
-      "travelsData.json"
-    );
+    let arrayWithRandomData = [];
+    let itemsAmount = 1;
+    let randomLocation = {};
 
-    const travelData = fs.readFileSync(p, "utf8");
+    const createFakeData = () => {
+      const randomRegion = `${faker.address.state()}, ${faker.address.stateAbbr()}`;
+      const randomCountry = `${faker.address.country()}, ${faker.address.cityPrefix()}`;
+      const randomCurrency = `${faker.finance.currencyName()}, ${faker.finance.currencyCode()}`;
 
-    return travelData;
+      if (itemsAmount % 3 === 0) {
+        randomLocation = {
+          country: randomCountry,
+          currency: randomCurrency,
+        };
+      } else {
+        randomLocation = {
+          region: randomRegion,
+          country: randomCountry,
+          currency: randomCurrency,
+        };
+      }
+
+      arrayWithRandomData.push(randomLocation);
+      itemsAmount += 1;
+
+      if (itemsAmount < 201) {
+        createFakeData();
+      }
+    };
+    createFakeData();
+
+    return arrayWithRandomData;
   }
 };

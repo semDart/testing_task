@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/semDart/priceline_testing_task_backend#readme",
   "devDependencies": {
+    "@faker-js/faker": "^5.5.3",
     "nodemon": "^2.0.15"
   },
   "dependencies": {
