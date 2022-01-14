@@ -7,8 +7,8 @@ module.exports = class Travel {
     let randomLocation = {};
 
     const createFakeData = () => {
-      const randomRegion = `${faker.address.state()}, ${faker.address.stateAbbr()}`;
-      const randomCountry = `${faker.address.country()}, ${faker.address.cityPrefix()}`;
+      const randomRegion = `${faker.address.state()}`;
+      const randomCountry = `${faker.address.country()}`;
       const randomCurrency = `${faker.finance.currencyName()}, ${faker.finance.currencyCode()}`;
 
       if (itemsAmount % 3 === 0) {
