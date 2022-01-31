@@ -6,7 +6,7 @@ import {
   getSelectedData,
 } from "../../selectors/selectors";
 import { resetSelectedData } from "../../reducers/travelsFormReducer";
-import { rowsUtil } from "../../utils/utils";
+import { rowsUtil } from "../../utils/rowsUtil/rowsUtil";
 import { Button } from "@material-ui/core";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
