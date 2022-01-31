@@ -5,7 +5,7 @@ import {
   ISeparateArrayByProperty,
   ITravelsFormState,
 } from "../interfaces/travels.interfaces";
-import { getSinglePropertyByName } from "../utils/utils";
+import { getSinglePropertyByName } from "../utils/getSinglePropertyByName/getSinglePropertyByName";
 
 const initialState: ITravelsFormState = {
   regions: [],
