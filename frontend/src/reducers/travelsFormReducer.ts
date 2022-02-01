@@ -5,7 +5,7 @@ import {
   ISeparateArrayByProperty,
   ITravelsFormState,
 } from "../interfaces/travels.interfaces";
-import { getSinglePropertyByName } from "../utils/getSinglePropertyByName/getSinglePropertyByName";
+import { getTravelDataByFieldName } from "../utils/getTravelDataByFieldName/getTravelDataByFieldName";
 
 const initialState: ITravelsFormState = {
   regions: [],
@@ -25,11 +25,11 @@ export const separateDataByProperty = createAsyncThunk<
   const travelsDataFromState = rootState.travelsTable.travelsData.toJS();
 
   if (travelsDataFromState.length > 0) {
-    const regions = getSinglePropertyByName(travelsDataFromState, region);
+    const regions = getTravelDataByFieldName(travelsDataFromState, region);
 
-    const countries = getSinglePropertyByName(travelsDataFromState, country);
+    const countries = getTravelDataByFieldName(travelsDataFromState, country);
 
-    const currencies = getSinglePropertyByName(travelsDataFromState, currency);
+    const currencies = getTravelDataByFieldName(travelsDataFromState, currency);
 
     return { regions, countries, currencies };
   }

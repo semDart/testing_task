@@ -1,5 +1,5 @@
 import { ITravel } from "../../interfaces/travels.interfaces";
-import { getSinglePropertyByName } from "./getSinglePropertyByName";
+import { getTravelDataByFieldName } from "./getTravelDataByFieldName";
 
 
 test("get array by single property name data", () => {
@@ -54,19 +54,19 @@ test("get array by single property name data", () => {
         },
     ];
 
-    expect(getSinglePropertyByName(dataFromDB, "region")).toBeDefined();
-    expect(getSinglePropertyByName(dataFromDB, "region")).not.toBe(null);
-    expect(getSinglePropertyByName(dataFromDB, "region")).toContain("Asia");
+    expect(getTravelDataByFieldName(dataFromDB, "region")).toBeDefined();
+    expect(getTravelDataByFieldName(dataFromDB, "region")).not.toBe(null);
+    expect(getTravelDataByFieldName(dataFromDB, "region")).toContain("Asia");
 
-    expect(getSinglePropertyByName(dataFromDB, "country")).toBeDefined();
-    expect(getSinglePropertyByName(dataFromDB, "country")).not.toBe(null);
-    expect(getSinglePropertyByName(dataFromDB, "country")).toContain(
+    expect(getTravelDataByFieldName(dataFromDB, "country")).toBeDefined();
+    expect(getTravelDataByFieldName(dataFromDB, "country")).not.toBe(null);
+    expect(getTravelDataByFieldName(dataFromDB, "country")).toContain(
         "Afghanistan"
     );
 
-    expect(getSinglePropertyByName(dataFromDB, "currency")).toBeDefined();
-    expect(getSinglePropertyByName(dataFromDB, "currency")).not.toBe(null);
-    expect(getSinglePropertyByName(dataFromDB, "currency")).toContain(
+    expect(getTravelDataByFieldName(dataFromDB, "currency")).toBeDefined();
+    expect(getTravelDataByFieldName(dataFromDB, "currency")).not.toBe(null);
+    expect(getTravelDataByFieldName(dataFromDB, "currency")).toContain(
         "EUR Euro"
     );
 });
