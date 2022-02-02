@@ -4,7 +4,7 @@ import {
   getCurrencies,
   getRegions,
   getTravelsTableData,
-} from "../../selectors/selectors";
+} from "../../selectors";
 import {
   saveSelectedData,
   separateDataByProperty,

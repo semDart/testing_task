@@ -1,10 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { ITravelsState } from "../interfaces/travels.interfaces";
+import { TravelTableState } from "../models/TravelTableState";
 import { fetchTravelsData } from "../services/travelsService";
 
 import { List } from "immutable";
 
-const initialState: ITravelsState = {
+const initialState: TravelTableState = {
   status: "idle",
   travelsData: List([]),
 };
@@ -25,10 +25,10 @@ const travelsTableReducer = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getTravelsData.pending, (state: ITravelsState) => {
+      .addCase(getTravelsData.pending, (state: TravelTableState) => {
         state.status = "loading";
       })
-      .addCase(getTravelsData.fulfilled, (state: ITravelsState, action) => {
+      .addCase(getTravelsData.fulfilled, (state: TravelTableState, action) => {
         state.status = "idle";
         state.travelsData = action.payload;
       });

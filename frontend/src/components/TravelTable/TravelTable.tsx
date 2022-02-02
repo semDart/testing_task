@@ -1,10 +1,10 @@
 import React from "react";
-import { ISaveSelectedData } from "../../interfaces/travels.interfaces";
+import { SelectedData } from "../../models/SelectedData";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   getModifiedTravelsData,
   getSelectedData,
-} from "../../selectors/selectors";
+} from "../../selectors";
 import { resetSelectedData } from "../../reducers/travelsFormReducer";
 import { rowsUtil } from "../../utils/rowsUtil/rowsUtil";
 import { Button } from "@material-ui/core";
@@ -12,7 +12,7 @@ import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
 import styles from "./TravelTable.module.css";
 
-const columnsUtil = (selectedData: ISaveSelectedData) => {
+const columnsUtil = (selectedData: SelectedData) => {
   const { selectedRegion, selectedCountries, selectedCurrencies } =
     selectedData;
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
-import { getSelectedDataConfirmed } from "./selectors/selectors";
+import { getSelectedDataConfirmed } from "./selectors";
 import { getTravelsData } from "./reducers/travelsTableReducer";
 import TravelForm from "./components/TravelForm/TravelForm";
 import TravelTable from "./components/TravelTable/TravelTable";
@@ -14,7 +14,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div className="App">
+    <div>
       {!selectedDataConfirmed && <TravelForm />}
 
       {selectedDataConfirmed && <TravelTable />}
