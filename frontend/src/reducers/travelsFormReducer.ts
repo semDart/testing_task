@@ -1,13 +1,11 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { country, currency, region } from "../constants";
-import {
-  ISaveSelectedData,
-  ISeparateArrayByProperty,
-  ITravelsFormState,
-} from "../interfaces/travels.interfaces";
+import { SelectedData } from "../models/SelectedData/SelectedData";
+import { SeparatedTravelData } from "../models/SeparatedTravelData/SeparatedTravelData";
+import { TravelFormState } from "../models/TravelFormState/TravelFormState";
 import { getTravelDataByFieldName } from "../utils/getTravelDataByFieldName/getTravelDataByFieldName";
 
-const initialState: ITravelsFormState = {
+const initialState: TravelFormState = {
   regions: [],
   countries: [],
   currencies: [],
@@ -18,7 +16,7 @@ const initialState: ITravelsFormState = {
 };
 
 export const separateDataByProperty = createAsyncThunk<
-  ISeparateArrayByProperty,
+  SeparatedTravelData,
   void
 >("travels/separateDataByProperty", (_, thunkAPI) => {
   const rootState: any = thunkAPI.getState();
@@ -26,22 +24,20 @@ export const separateDataByProperty = createAsyncThunk<
 
   if (travelsDataFromState.length > 0) {
     const regions = getTravelDataByFieldName(travelsDataFromState, region);
-
     const countries = getTravelDataByFieldName(travelsDataFromState, country);
-
     const currencies = getTravelDataByFieldName(travelsDataFromState, currency);
 
     return { regions, countries, currencies };
   }
 
-  return {} as ISeparateArrayByProperty;
+  return {} as SeparatedTravelData;
 });
 
 const travelsFormReducer = createSlice({
   name: "travelsForm",
   initialState,
   reducers: {
-    saveSelectedData(state, action: PayloadAction<ISaveSelectedData>) {
+    saveSelectedData(state, action: PayloadAction<SelectedData>) {
       state.selectedRegion = action.payload.selectedRegion;
       state.selectedCountries = action.payload.selectedCountries;
       state.selectedCurrencies = action.payload.selectedCurrencies;
@@ -58,7 +54,7 @@ const travelsFormReducer = createSlice({
   extraReducers: (builder) => {
     builder.addCase(
       separateDataByProperty.fulfilled,
-      (state: ITravelsFormState, action) => {
+      (state: TravelFormState, action) => {
         state.regions = action.payload.regions;
         state.countries = action.payload.countries;
         state.currencies = action.payload.currencies;

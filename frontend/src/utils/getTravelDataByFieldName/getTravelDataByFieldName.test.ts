@@ -1,9 +1,9 @@
-import { ITravel } from "../../interfaces/travels.interfaces";
+import { Travel } from "../../models/Travel/Travel";
 import { getTravelDataByFieldName } from "./getTravelDataByFieldName";
 
 
 test("get array by single property name data", () => {
-    const dataFromDB: ITravel[] = [
+    const dataFromDB: Travel[] = [
         {
             region: "Asia",
             country: "Afghanistan",

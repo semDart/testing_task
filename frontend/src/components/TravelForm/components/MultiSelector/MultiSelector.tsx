@@ -1,10 +1,10 @@
 import React from "react";
-import { IMultiSelectorProps } from "../../../../interfaces/travels.interfaces";
+import { MultiSelectorProps } from "../../../../models/MultiSelectorProps/MultiSelectorProps";
 import { Autocomplete } from "@mui/material";
 import { TextField } from "@material-ui/core";
 import { useStyles } from "./MultiSelector.styles";
 
-const MultiSelector = (props: IMultiSelectorProps) => {
+const MultiSelector = (props: MultiSelectorProps) => {
   const {
     field,
     labelName,

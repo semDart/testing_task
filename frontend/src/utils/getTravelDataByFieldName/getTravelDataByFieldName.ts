@@ -1,4 +1,4 @@
-import { ITravel } from "../../interfaces/travels.interfaces";
+import { Travel } from "../../models/Travel/Travel";
 
 /**
  * Get unique values
@@ -31,13 +31,13 @@ const sortArrayAlphabetically = (valuesArray: string[]): string[] =>
  * @returns {Array.<string>}
  */
 export const getTravelDataByFieldName = (
-    travelData: ITravel[],
+    travelData: Travel[],
     propertyName: string
 ): string[] => {
     const valuesByPropertyName = travelData.map((location) =>
-        location[propertyName] ? location[propertyName] : "Not provided"
+        location[propertyName as keyof Travel] ? location[propertyName as keyof Travel] : "Not provided"
     );
-    const uniqueValues = getUniqueValues(valuesByPropertyName);
+    const uniqueValues = getUniqueValues(valuesByPropertyName as string[]);
     const valuesSortedAlphabetically = sortArrayAlphabetically(uniqueValues);
 
     return valuesSortedAlphabetically;

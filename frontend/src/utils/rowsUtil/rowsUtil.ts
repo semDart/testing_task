@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
-import { ITravel } from "../../interfaces/travels.interfaces";
+import { Travel } from "../../models/Travel/Travel";
 
-export const rowsUtil = (tableData: ITravel[]) => {
+export const rowsUtil = (tableData: Travel[]) => {
     return tableData.map(({ region, country, currency }) => {
         return {
             id: uuidv4(),

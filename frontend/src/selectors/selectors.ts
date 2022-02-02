@@ -1,4 +1,4 @@
-import { ITravel } from "../interfaces/travels.interfaces";
+import { Travel } from "../models/Travel/Travel";
 import { RootState } from "../store/store";
 
 export const getTravelsTableData = (state: RootState) => {
@@ -10,7 +10,7 @@ export const getTravelsTableData = (state: RootState) => {
 export const getModifiedTravelsData = (state: RootState) => {
   const parsedTravelsData = state.travelsTable.travelsData.toJS();
 
-  const modifiedTravelsData = parsedTravelsData.map((location: ITravel) => {
+  const modifiedTravelsData = parsedTravelsData.map((location: Travel) => {
     if (!location.region) {
       return {
         ...location,

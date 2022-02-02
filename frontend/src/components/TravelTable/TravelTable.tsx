@@ -1,5 +1,5 @@
 import React from "react";
-import { ISaveSelectedData } from "../../interfaces/travels.interfaces";
+import { SelectedData } from "../../models/SelectedData/SelectedData";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   getModifiedTravelsData,
@@ -12,7 +12,7 @@ import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
 import styles from "./TravelTable.module.css";
 
-const columnsUtil = (selectedData: ISaveSelectedData) => {
+const columnsUtil = (selectedData: SelectedData) => {
   const { selectedRegion, selectedCountries, selectedCurrencies } =
     selectedData;
 

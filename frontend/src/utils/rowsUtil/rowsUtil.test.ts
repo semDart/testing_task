@@ -1,9 +1,9 @@
-import { ITravel } from "../../interfaces/travels.interfaces";
+import { Travel } from "../../models/Travel/Travel";
 import { rowsUtil } from "./rowsUtil";
 
 
 test("get rows data in main table", () => {
-    const dataFromDB: ITravel[] = [
+    const dataFromDB: Travel[] = [
         {
             region: "Asia",
             country: "Afghanistan",
