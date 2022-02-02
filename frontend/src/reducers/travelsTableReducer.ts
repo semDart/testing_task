@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { TravelTableState } from "../models/TravelTableState/TravelTableState";
+import { TravelTableState } from "../models/TravelTableState";
 import { fetchTravelsData } from "../services/travelsService";
 
 import { List } from "immutable";

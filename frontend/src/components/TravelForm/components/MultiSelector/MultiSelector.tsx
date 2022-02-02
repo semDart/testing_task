@@ -1,5 +1,5 @@
 import React from "react";
-import { MultiSelectorProps } from "../../../../models/MultiSelectorProps/MultiSelectorProps";
+import { MultiSelectorProps } from "../../../../models/MultiSelectorProps";
 import { Autocomplete } from "@mui/material";
 import { TextField } from "@material-ui/core";
 import { useStyles } from "./MultiSelector.styles";

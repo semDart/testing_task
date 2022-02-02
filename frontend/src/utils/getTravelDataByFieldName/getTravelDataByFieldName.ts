@@ -1,4 +1,4 @@
-import { Travel } from "../../models/Travel/Travel";
+import { Travel } from "../../models/Travel";
 
 /**
  * Get unique values

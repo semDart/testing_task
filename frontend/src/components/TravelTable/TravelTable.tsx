@@ -1,5 +1,5 @@
 import React from "react";
-import { SelectedData } from "../../models/SelectedData/SelectedData";
+import { SelectedData } from "../../models/SelectedData";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   getModifiedTravelsData,
