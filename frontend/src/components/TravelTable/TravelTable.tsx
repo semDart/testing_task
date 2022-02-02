@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   getModifiedTravelsData,
   getSelectedData,
-} from "../../selectors/selectors";
+} from "../../selectors";
 import { resetSelectedData } from "../../reducers/travelsFormReducer";
 import { rowsUtil } from "../../utils/rowsUtil/rowsUtil";
 import { Button } from "@material-ui/core";
