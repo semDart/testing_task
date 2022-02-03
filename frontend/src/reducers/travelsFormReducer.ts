@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { country, currency, region } from "../constants";
 import { getTravelDataByFieldName } from "../utils/getTravelDataByFieldName/getTravelDataByFieldName";
 
-type SelectedData = {
+export type SelectedData = {
   selectedRegion: string;
   selectedCountries: string[];
   selectedCurrencies: string[];

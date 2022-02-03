@@ -2,13 +2,13 @@ import { Travel } from "../models/Travel";
 import { RootState } from "../store/store";
 
 export const getTravelsTableData = (state: RootState) => {
-  const parsedTravelsData = state.travelsTable.travelsData.toJS();
+  const parsedTravelsData = state.travelsTable.travelsData.toArray();
 
   return parsedTravelsData;
 };
 
 export const getModifiedTravelsData = (state: RootState) => {
-  const parsedTravelsData = state.travelsTable.travelsData.toJS();
+  const parsedTravelsData = state.travelsTable.travelsData.toArray();
 
   const modifiedTravelsData = parsedTravelsData.map((location: Travel) => {
     if (!location.region) {

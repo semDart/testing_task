@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { Travel } from "../models/Travel";
 import { fetchTravelsData } from "../services/travelsService";
 
 import { List } from "immutable";
 
 type TravelTableState = {
   status: "idle" | "loading" | "failed";
-  travelsData: any;
-}
+  travelsData: List<Travel>;
+};
 
 const initialState: TravelTableState = {
   status: "idle",
-  travelsData: List([]),
+  travelsData: List<Travel>(),
 };
 
 export const getTravelsData = createAsyncThunk(
@@ -29,13 +30,19 @@ const travelsTableReducer = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getTravelsData.pending, (state: TravelTableState) => {
-        state.status = "loading";
-      })
-      .addCase(getTravelsData.fulfilled, (state: TravelTableState, action) => {
-        state.status = "idle";
-        state.travelsData = action.payload;
-      });
+      .addCase(getTravelsData.pending, (state) => ({
+        ...state,
+        status: "loading",
+      }))
+      .addCase(getTravelsData.fulfilled, (state, action) => ({
+        ...state,
+        status: "idle",
+        travelsData: action.payload,
+      }))
+      .addCase(getTravelsData.rejected, (state) => ({
+        ...state,
+        status: "failed",
+      }));
   },
 });
 

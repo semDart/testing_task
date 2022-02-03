@@ -1,18 +1,15 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getModifiedTravelsData, getSelectedData } from "../../selectors";
-import { resetSelectedData } from "../../reducers/travelsFormReducer";
+import {
+  resetSelectedData,
+  SelectedData,
+} from "../../reducers/travelsFormReducer";
 import { rowsUtil } from "../../utils/rowsUtil/rowsUtil";
 import { Button } from "@material-ui/core";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
 
 import styles from "./TravelTable.module.css";
-
-type SelectedData = {
-  selectedRegion: string;
-  selectedCountries: string[];
-  selectedCurrencies: string[];
-};
 
 const columnsUtil = (selectedData: SelectedData) => {
   const { selectedRegion, selectedCountries, selectedCurrencies } =
