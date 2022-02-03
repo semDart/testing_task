@@ -1,8 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { TravelTableState } from "../models/TravelTableState";
 import { fetchTravelsData } from "../services/travelsService";
 
 import { List } from "immutable";
+
+type TravelTableState = {
+  status: "idle" | "loading" | "failed";
+  travelsData: any;
+}
 
 const initialState: TravelTableState = {
   status: "idle",
