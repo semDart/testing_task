@@ -1,9 +1,28 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { country, currency, region } from "../constants";
-import { SelectedData } from "../models/SelectedData";
-import { SeparatedTravelData } from "../models/SeparatedTravelData";
-import { TravelFormState } from "../models/TravelFormState";
 import { getTravelDataByFieldName } from "../utils/getTravelDataByFieldName/getTravelDataByFieldName";
+
+export type SelectedData = {
+  selectedRegion: string;
+  selectedCountries: string[];
+  selectedCurrencies: string[];
+};
+
+type SeparatedTravelData = {
+  regions: string[],
+  countries: string[],
+  currencies: string[]
+}
+
+type TravelFormState = {
+  regions: string[];
+  countries: string[];
+  currencies: string[];
+  selectedRegion: string;
+  selectedCountries: string[];
+  selectedCurrencies: string[];
+  selectedDataConfirmed: boolean;
+}
 
 const initialState: TravelFormState = {
   regions: [],

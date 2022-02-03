@@ -1,11 +1,10 @@
 import React from "react";
-import { SelectedData } from "../../models/SelectedData";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { getModifiedTravelsData, getSelectedData } from "../../selectors";
 import {
-  getModifiedTravelsData,
-  getSelectedData,
-} from "../../selectors";
-import { resetSelectedData } from "../../reducers/travelsFormReducer";
+  resetSelectedData,
+  SelectedData,
+} from "../../reducers/travelsFormReducer";
 import { rowsUtil } from "../../utils/rowsUtil/rowsUtil";
 import { Button } from "@material-ui/core";
 import { DataGrid, GridColDef, GridToolbar } from "@mui/x-data-grid";
