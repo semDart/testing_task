@@ -35,10 +35,8 @@ export const getTravelDataByFieldName = (
     travelData: List<Travel>,
     propertyName: string
 ): List<string> => {
-    const valuesByPropertyName = travelData.map((location) =>
-        location[propertyName as keyof Travel]
-            ? location[propertyName as keyof Travel]
-            : "Not provided"
+    const valuesByPropertyName = travelData.map(
+        (location) => location[propertyName as keyof Travel]
     );
     const uniqueValues = getUniqueValues(valuesByPropertyName as List<string>);
     const valuesSortedAlphabetically = sortArrayAlphabetically(uniqueValues);

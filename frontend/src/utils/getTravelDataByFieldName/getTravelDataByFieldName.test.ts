@@ -2,7 +2,7 @@ import { List } from "immutable";
 import { getTravelDataByFieldName } from "./getTravelDataByFieldName";
 
 test("get array by single property name data", () => {
-    const dataFromDB = [
+    const originData = [
         {
             region: "Asia",
             country: "Afghanistan",
@@ -52,7 +52,7 @@ test("get array by single property name data", () => {
             currency: "AMD Armenian dram",
         },
     ];
-    const immutableData = List(dataFromDB);
+    const immutableData = List(originData);
 
     expect(getTravelDataByFieldName(immutableData, "region")).toBeDefined();
     expect(getTravelDataByFieldName(immutableData, "region")).not.toBe(null);

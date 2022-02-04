@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { getModifiedTravelsData, getSelectedData } from "../../selectors";
+import { getSelectedData, getTravelsTableData } from "../../selectors";
 import {
   resetSelectedData,
   SelectedData,
@@ -78,7 +78,7 @@ const columnsUtil = (selectedData: SelectedData) => {
 // In this component use module css for styling because of columnsUtil function,
 // inside which we can't use hook useStyles()
 const TravelTable = () => {
-  const modifiedTravelsTableData = useAppSelector(getModifiedTravelsData);
+  const travelsData = useAppSelector(getTravelsTableData);
   const selectedData = useAppSelector(getSelectedData);
 
   const dispatch = useAppDispatch();
@@ -93,7 +93,7 @@ const TravelTable = () => {
     }
   };
 
-  const rows = rowsUtil(modifiedTravelsTableData);
+  const rows = rowsUtil(travelsData);
   const columns = columnsUtil(selectedData);
 
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   getCountries,
   getCurrencies,
@@ -96,6 +96,8 @@ const TravelForm = () => {
     }
   };
 
+  const memoizedRegionsOptions = useMemo(() => regions.toArray(), [regions]);
+
   const classes = useStyles();
 
   return (
@@ -107,7 +109,7 @@ const TravelForm = () => {
           id="region"
           disablePortal
           value={selectedRegion || null}
-          options={regions.toArray() as string[]}
+          options={memoizedRegionsOptions}
           onChange={handleSingleSelectorChange}
           renderInput={(params) => (
             <TextField
@@ -123,7 +125,7 @@ const TravelForm = () => {
         <MultiSelector
           field="country"
           labelName="Countries"
-          initialValues={countries}
+          options={countries}
           selectedValues={selectedCountries}
           handleChangeSelectedValues={handleCountriesChange}
         />
@@ -131,7 +133,7 @@ const TravelForm = () => {
         <MultiSelector
           field="currency"
           labelName="Currencies"
-          initialValues={currencies}
+          options={currencies}
           selectedValues={selectedCurrencies}
           handleChangeSelectedValues={handleCurrenciesChange}
         />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { List } from "immutable";
 import { Autocomplete } from "@mui/material";
 import { TextField } from "@material-ui/core";
@@ -7,7 +7,7 @@ import { useStyles } from "./MultiSelector.styles";
 type MultiSelectorProps = {
   field: string;
   labelName: string;
-  initialValues: List<string>;
+  options: List<string>;
   selectedValues: string[];
   handleChangeSelectedValues: (
     event: React.SyntheticEvent<Element, Event>,
@@ -19,10 +19,12 @@ const MultiSelector = (props: MultiSelectorProps) => {
   const {
     field,
     labelName,
-    initialValues,
+    options,
     selectedValues,
     handleChangeSelectedValues,
   } = props;
+
+  const memoizedOptions = useMemo(() => options.toArray(), [options]);
 
   const classes = useStyles();
 
@@ -31,7 +33,7 @@ const MultiSelector = (props: MultiSelectorProps) => {
       multiple
       id={field}
       value={selectedValues}
-      options={initialValues.toArray()}
+      options={memoizedOptions}
       getOptionLabel={(option) => option}
       onChange={handleChangeSelectedValues}
       renderInput={(params) => (

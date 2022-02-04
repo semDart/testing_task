@@ -18,7 +18,13 @@ export const getTravelsData = createAsyncThunk(
   "travels/getTravelsData",
   async () => {
     const data = await fetchTravelsData();
-    const immutableData = List(data);
+    const modifiedData = data?.map((location) => location.region
+      ? location
+      : {
+        ...location,
+        region: "Not provided",
+      });
+    const immutableData = List(modifiedData);
 
     return immutableData;
   }

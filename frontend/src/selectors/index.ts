@@ -1,18 +1,7 @@
-import { Travel } from "../models/Travel";
 import { RootState } from "../store/store";
 
 export const getTravelsTableData = (state: RootState) =>
   state.travelsTable.travelsData;
-
-export const getModifiedTravelsData = (state: RootState) =>
-  state.travelsTable.travelsData.map((location: Travel) =>
-    location.region
-      ? location
-      : {
-        ...location,
-        region: "Not provided",
-      }
-  );
 
 export const getRegions = (state: RootState) => state.travelsForm.regions;
 

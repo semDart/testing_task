@@ -3,7 +3,7 @@ import { rowsUtil } from "./rowsUtil";
 
 
 test("get rows data in main table", () => {
-    const dataFromDB = [
+    const originData = [
         {
             region: "Asia",
             country: "Afghanistan",
@@ -53,11 +53,11 @@ test("get rows data in main table", () => {
             currency: "AMD Armenian dram",
         },
     ]
-    const immutableData = List(dataFromDB);
+    const immutableData = List(originData);
 
     expect(rowsUtil(immutableData)).toBeDefined();
     expect(rowsUtil(immutableData)).not.toBe(null);
-    expect(rowsUtil(immutableData).get(0)).toEqual(
+    expect(rowsUtil(immutableData).first()).toEqual(
         expect.objectContaining({
             id: expect.any(String),
             region: expect.any(String),
