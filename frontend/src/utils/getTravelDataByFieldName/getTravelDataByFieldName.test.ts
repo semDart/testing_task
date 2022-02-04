@@ -1,9 +1,8 @@
-import { Travel } from "../../models/Travel";
+import { List } from "immutable";
 import { getTravelDataByFieldName } from "./getTravelDataByFieldName";
 
-
 test("get array by single property name data", () => {
-    const dataFromDB: Travel[] = [
+    const dataFromDB = [
         {
             region: "Asia",
             country: "Afghanistan",
@@ -53,20 +52,21 @@ test("get array by single property name data", () => {
             currency: "AMD Armenian dram",
         },
     ];
+    const immutableData = List(dataFromDB);
 
-    expect(getTravelDataByFieldName(dataFromDB, "region")).toBeDefined();
-    expect(getTravelDataByFieldName(dataFromDB, "region")).not.toBe(null);
-    expect(getTravelDataByFieldName(dataFromDB, "region")).toContain("Asia");
+    expect(getTravelDataByFieldName(immutableData, "region")).toBeDefined();
+    expect(getTravelDataByFieldName(immutableData, "region")).not.toBe(null);
+    expect(getTravelDataByFieldName(immutableData, "region")).toContain("Asia");
 
-    expect(getTravelDataByFieldName(dataFromDB, "country")).toBeDefined();
-    expect(getTravelDataByFieldName(dataFromDB, "country")).not.toBe(null);
-    expect(getTravelDataByFieldName(dataFromDB, "country")).toContain(
+    expect(getTravelDataByFieldName(immutableData, "country")).toBeDefined();
+    expect(getTravelDataByFieldName(immutableData, "country")).not.toBe(null);
+    expect(getTravelDataByFieldName(immutableData, "country")).toContain(
         "Afghanistan"
     );
 
-    expect(getTravelDataByFieldName(dataFromDB, "currency")).toBeDefined();
-    expect(getTravelDataByFieldName(dataFromDB, "currency")).not.toBe(null);
-    expect(getTravelDataByFieldName(dataFromDB, "currency")).toContain(
+    expect(getTravelDataByFieldName(immutableData, "currency")).toBeDefined();
+    expect(getTravelDataByFieldName(immutableData, "currency")).not.toBe(null);
+    expect(getTravelDataByFieldName(immutableData, "currency")).toContain(
         "EUR Euro"
     );
 });

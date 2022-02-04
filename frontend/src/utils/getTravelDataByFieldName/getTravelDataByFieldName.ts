@@ -1,25 +1,26 @@
+import { List } from "immutable";
 import { Travel } from "../../models/Travel";
 
 /**
  * Get unique values
  * @function
- * @param valuesArray 
+ * @param valuesArray
  * @returns {Array.<string>}
  */
-const getUniqueValues = (valuesArray: string[]): string[] =>
+const getUniqueValues = (valuesArray: List<string>): List<string> =>
     valuesArray.filter(
-        (property: string, index: number, array: string[]) =>
+        (property: string, index: number, array: List<string>) =>
             array.indexOf(property) === index
     );
 
 /**
  * Sort array of values alphabetically
  * @function
- * @param valuesArray 
+ * @param valuesArray
  * @returns {Array.<string>}
  */
-const sortArrayAlphabetically = (valuesArray: string[]): string[] =>
-    [...valuesArray].sort((currentString, nextString) =>
+const sortArrayAlphabetically = (valuesArray: List<string>): List<string> =>
+    valuesArray.sort((currentString, nextString) =>
         currentString.localeCompare(nextString)
     );
 
@@ -31,13 +32,15 @@ const sortArrayAlphabetically = (valuesArray: string[]): string[] =>
  * @returns {Array.<string>}
  */
 export const getTravelDataByFieldName = (
-    travelData: Travel[],
+    travelData: List<Travel>,
     propertyName: string
-): string[] => {
+): List<string> => {
     const valuesByPropertyName = travelData.map((location) =>
-        location[propertyName as keyof Travel] ? location[propertyName as keyof Travel] : "Not provided"
+        location[propertyName as keyof Travel]
+            ? location[propertyName as keyof Travel]
+            : "Not provided"
     );
-    const uniqueValues = getUniqueValues(valuesByPropertyName as string[]);
+    const uniqueValues = getUniqueValues(valuesByPropertyName as List<string>);
     const valuesSortedAlphabetically = sortArrayAlphabetically(uniqueValues);
 
     return valuesSortedAlphabetically;

@@ -28,13 +28,13 @@ const TravelForm = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (travelsTableData.length) {
+    if (travelsTableData.size) {
       dispatch(separateDataByProperty());
     }
-  }, [dispatch, travelsTableData.length]);
+  }, [dispatch, travelsTableData.size]);
 
   const handleSingleSelectorChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     value: string | null
   ) => {
     if (value) {
@@ -45,14 +45,14 @@ const TravelForm = () => {
   };
 
   const handleCountriesChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     values: string[]
   ) => {
     setSelectedCountries(values);
   };
 
   const handleCurrenciesChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     values: string[]
   ) => {
     setSelectedCurrencies(values);
@@ -107,7 +107,7 @@ const TravelForm = () => {
           id="region"
           disablePortal
           value={selectedRegion || null}
-          options={regions as string[]}
+          options={regions.toArray() as string[]}
           onChange={handleSingleSelectorChange}
           renderInput={(params) => (
             <TextField

@@ -118,7 +118,7 @@ const TravelTable = () => {
 
       <DataGrid
         autoHeight
-        rows={rows}
+        rows={rows.toArray()}
         columns={columns}
         pageSize={25}
         rowsPerPageOptions={[25]}

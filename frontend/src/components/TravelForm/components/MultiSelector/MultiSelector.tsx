@@ -1,4 +1,5 @@
 import React from "react";
+import { List } from "immutable";
 import { Autocomplete } from "@mui/material";
 import { TextField } from "@material-ui/core";
 import { useStyles } from "./MultiSelector.styles";
@@ -6,7 +7,7 @@ import { useStyles } from "./MultiSelector.styles";
 type MultiSelectorProps = {
   field: string;
   labelName: string;
-  initialValues: string[];
+  initialValues: List<string>;
   selectedValues: string[];
   handleChangeSelectedValues: (
     event: React.SyntheticEvent<Element, Event>,
@@ -30,7 +31,7 @@ const MultiSelector = (props: MultiSelectorProps) => {
       multiple
       id={field}
       value={selectedValues}
-      options={initialValues}
+      options={initialValues.toArray()}
       getOptionLabel={(option) => option}
       onChange={handleChangeSelectedValues}
       renderInput={(params) => (

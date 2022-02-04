@@ -1,28 +1,18 @@
 import { Travel } from "../models/Travel";
 import { RootState } from "../store/store";
 
-export const getTravelsTableData = (state: RootState) => {
-  const parsedTravelsData = state.travelsTable.travelsData.toArray();
+export const getTravelsTableData = (state: RootState) =>
+  state.travelsTable.travelsData;
 
-  return parsedTravelsData;
-};
-
-export const getModifiedTravelsData = (state: RootState) => {
-  const parsedTravelsData = state.travelsTable.travelsData.toArray();
-
-  const modifiedTravelsData = parsedTravelsData.map((location: Travel) => {
-    if (!location.region) {
-      return {
+export const getModifiedTravelsData = (state: RootState) =>
+  state.travelsTable.travelsData.map((location: Travel) =>
+    location.region
+      ? location
+      : {
         ...location,
         region: "Not provided",
-      };
-    } else {
-      return location;
-    }
-  });
-
-  return modifiedTravelsData;
-};
+      }
+  );
 
 export const getRegions = (state: RootState) => state.travelsForm.regions;
 
@@ -34,9 +24,8 @@ export const getSelectedDataConfirmed = (state: RootState) =>
   state.travelsForm.selectedDataConfirmed;
 
 export const getSelectedData = (state: RootState) => {
-  const selectedRegion = state.travelsForm.selectedRegion;
-  const selectedCountries = state.travelsForm.selectedCountries;
-  const selectedCurrencies = state.travelsForm.selectedCurrencies;
+  const { selectedRegion, selectedCountries, selectedCurrencies } =
+    state.travelsForm;
 
   return { selectedRegion, selectedCountries, selectedCurrencies };
 };

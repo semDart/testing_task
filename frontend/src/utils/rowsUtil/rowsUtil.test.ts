@@ -1,9 +1,9 @@
-import { Travel } from "../../models/Travel";
+import { List } from "immutable";
 import { rowsUtil } from "./rowsUtil";
 
 
 test("get rows data in main table", () => {
-    const dataFromDB: Travel[] = [
+    const dataFromDB = [
         {
             region: "Asia",
             country: "Afghanistan",
@@ -52,11 +52,12 @@ test("get rows data in main table", () => {
             country: "Armenia",
             currency: "AMD Armenian dram",
         },
-    ];
+    ]
+    const immutableData = List(dataFromDB);
 
-    expect(rowsUtil(dataFromDB)).toBeDefined();
-    expect(rowsUtil(dataFromDB)).not.toBe(null);
-    expect(rowsUtil(dataFromDB)[0]).toEqual(
+    expect(rowsUtil(immutableData)).toBeDefined();
+    expect(rowsUtil(immutableData)).not.toBe(null);
+    expect(rowsUtil(immutableData).get(0)).toEqual(
         expect.objectContaining({
             id: expect.any(String),
             region: expect.any(String),
