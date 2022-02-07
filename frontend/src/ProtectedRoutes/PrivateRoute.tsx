@@ -1,18 +1,15 @@
 import { Navigate } from "react-router-dom";
-import { useAppSelector } from "../store/hooks";
 
 type PrivateRouteProps = {
   children: React.ReactNode;
+  condition: boolean;
+  rediractingPath: string;
 };
 
 const PrivateRoute = (props: PrivateRouteProps) => {
-  const { children } = props;
+  const { children, condition, rediractingPath } = props;
 
-  const selectedDataConfirmed = useAppSelector(
-    (state) => state.travelsForm.selectedDataConfirmed
-  );
-
-  return <>{selectedDataConfirmed ? children : <Navigate to="/" />}</>;
+  return <>{condition ? children : <Navigate to={rediractingPath} />}</>;
 };
 
 export default PrivateRoute;
