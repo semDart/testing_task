@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store/store";
 import { country, currency, region } from "../constants";
 import { getTravelDataByFieldName } from "../utils/getTravelDataByFieldName/getTravelDataByFieldName";
+import { List } from "immutable";
 
 export type SelectedData = {
   selectedRegion: string;
@@ -9,25 +11,25 @@ export type SelectedData = {
 };
 
 type SeparatedTravelData = {
-  regions: string[],
-  countries: string[],
-  currencies: string[]
-}
+  regions: List<string>;
+  countries: List<string>;
+  currencies: List<string>;
+};
 
 type TravelFormState = {
-  regions: string[];
-  countries: string[];
-  currencies: string[];
+  regions: List<string>;
+  countries: List<string>;
+  currencies: List<string>;
   selectedRegion: string;
   selectedCountries: string[];
   selectedCurrencies: string[];
   selectedDataConfirmed: boolean;
-}
+};
 
 const initialState: TravelFormState = {
-  regions: [],
-  countries: [],
-  currencies: [],
+  regions: List<string>(),
+  countries: List<string>(),
+  currencies: List<string>(),
   selectedRegion: "",
   selectedCountries: [],
   selectedCurrencies: [],
@@ -38,10 +40,10 @@ export const separateDataByProperty = createAsyncThunk<
   SeparatedTravelData,
   void
 >("travels/separateDataByProperty", (_, thunkAPI) => {
-  const rootState: any = thunkAPI.getState();
-  const travelsDataFromState = rootState.travelsTable.travelsData.toJS();
+  const rootState = thunkAPI.getState() as RootState;
+  const travelsDataFromState = rootState.travelsTable.travelsData;
 
-  if (travelsDataFromState.length > 0) {
+  if (travelsDataFromState.size > 0) {
     const regions = getTravelDataByFieldName(travelsDataFromState, region);
     const countries = getTravelDataByFieldName(travelsDataFromState, country);
     const currencies = getTravelDataByFieldName(travelsDataFromState, currency);
@@ -71,14 +73,12 @@ const travelsFormReducer = createSlice({
   },
 
   extraReducers: (builder) => {
-    builder.addCase(
-      separateDataByProperty.fulfilled,
-      (state: TravelFormState, action) => {
-        state.regions = action.payload.regions;
-        state.countries = action.payload.countries;
-        state.currencies = action.payload.currencies;
-      }
-    );
+    builder.addCase(separateDataByProperty.fulfilled, (state, action) => ({
+      ...state,
+      regions: action.payload.regions,
+      countries: action.payload.countries,
+      currencies: action.payload.currencies,
+    }));
   },
 });
 

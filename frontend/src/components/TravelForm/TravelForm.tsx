@@ -1,10 +1,4 @@
-import React, { useEffect, useState } from "react";
-import {
-  getCountries,
-  getCurrencies,
-  getRegions,
-  getTravelsTableData,
-} from "../../selectors";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   saveSelectedData,
   separateDataByProperty,
@@ -16,10 +10,12 @@ import MultiSelector from "./components/MultiSelector/MultiSelector";
 import { useStyles } from "./TravelForm.styles";
 
 const TravelForm = () => {
-  const travelsTableData = useAppSelector(getTravelsTableData);
-  const regions = useAppSelector(getRegions);
-  const countries = useAppSelector(getCountries);
-  const currencies = useAppSelector(getCurrencies);
+  const travelsTableData = useAppSelector(
+    (state) => state.travelsTable.travelsData
+  );
+  const regions = useAppSelector((state) => state.travelsForm.regions);
+  const countries = useAppSelector((state) => state.travelsForm.countries);
+  const currencies = useAppSelector((state) => state.travelsForm.currencies);
 
   const [selectedRegion, setSelectedRegion] = useState("");
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
@@ -28,13 +24,13 @@ const TravelForm = () => {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (travelsTableData.length) {
+    if (travelsTableData.size) {
       dispatch(separateDataByProperty());
     }
-  }, [dispatch, travelsTableData.length]);
+  }, [dispatch, travelsTableData.size]);
 
   const handleSingleSelectorChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     value: string | null
   ) => {
     if (value) {
@@ -45,14 +41,14 @@ const TravelForm = () => {
   };
 
   const handleCountriesChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     values: string[]
   ) => {
     setSelectedCountries(values);
   };
 
   const handleCurrenciesChange = (
-    event: React.SyntheticEvent<Element, Event>,
+    _event: React.SyntheticEvent<Element, Event>,
     values: string[]
   ) => {
     setSelectedCurrencies(values);
@@ -96,6 +92,8 @@ const TravelForm = () => {
     }
   };
 
+  const memoizedRegionsOptions = useMemo(() => regions.toArray(), [regions]);
+
   const classes = useStyles();
 
   return (
@@ -107,7 +105,7 @@ const TravelForm = () => {
           id="region"
           disablePortal
           value={selectedRegion || null}
-          options={regions as string[]}
+          options={memoizedRegionsOptions}
           onChange={handleSingleSelectorChange}
           renderInput={(params) => (
             <TextField
@@ -123,7 +121,7 @@ const TravelForm = () => {
         <MultiSelector
           field="country"
           labelName="Countries"
-          initialValues={countries}
+          options={countries}
           selectedValues={selectedCountries}
           handleChangeSelectedValues={handleCountriesChange}
         />
@@ -131,7 +129,7 @@ const TravelForm = () => {
         <MultiSelector
           field="currency"
           labelName="Currencies"
-          initialValues={currencies}
+          options={currencies}
           selectedValues={selectedCurrencies}
           handleChangeSelectedValues={handleCurrenciesChange}
         />
