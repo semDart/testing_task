@@ -1,11 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
 import {
-  getCountries,
-  getCurrencies,
-  getRegions,
-  getTravelsTableData,
-} from "../../selectors";
-import {
   saveSelectedData,
   separateDataByProperty,
 } from "../../reducers/travelsFormReducer";
@@ -16,10 +10,12 @@ import MultiSelector from "./components/MultiSelector/MultiSelector";
 import { useStyles } from "./TravelForm.styles";
 
 const TravelForm = () => {
-  const travelsTableData = useAppSelector(getTravelsTableData);
-  const regions = useAppSelector(getRegions);
-  const countries = useAppSelector(getCountries);
-  const currencies = useAppSelector(getCurrencies);
+  const travelsTableData = useAppSelector(
+    (state) => state.travelsTable.travelsData
+  );
+  const regions = useAppSelector((state) => state.travelsForm.regions);
+  const countries = useAppSelector((state) => state.travelsForm.countries);
+  const currencies = useAppSelector((state) => state.travelsForm.currencies);
 
   const [selectedRegion, setSelectedRegion] = useState("");
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);

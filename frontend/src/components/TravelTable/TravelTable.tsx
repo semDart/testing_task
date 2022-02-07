@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
-import { getSelectedData, getTravelsTableData } from "../../selectors";
+import { getSelectedData } from "../../selectors";
 import {
   resetSelectedData,
   SelectedData,
@@ -78,7 +78,7 @@ const columnsUtil = (selectedData: SelectedData) => {
 // In this component use module css for styling because of columnsUtil function,
 // inside which we can't use hook useStyles()
 const TravelTable = () => {
-  const travelsData = useAppSelector(getTravelsTableData);
+  const travelsData = useAppSelector((state) => state.travelsTable.travelsData);
   const selectedData = useAppSelector(getSelectedData);
 
   const dispatch = useAppDispatch();
