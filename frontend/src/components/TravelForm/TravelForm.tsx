@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   saveSelectedData,
   separateDataByProperty,
@@ -22,6 +23,7 @@ const TravelForm = () => {
   const [selectedCurrencies, setSelectedCurrencies] = useState<string[]>([]);
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (travelsTableData.size) {
@@ -89,6 +91,7 @@ const TravelForm = () => {
       };
 
       dispatch(saveSelectedData(selectedData));
+      navigate("/table");
     }
   };
 

@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "./store/hooks";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useAppDispatch } from "./store/hooks";
 import { getTravelsData } from "./reducers/travelsTableReducer";
-import TravelForm from "./components/TravelForm/TravelForm";
-import TravelTable from "./components/TravelTable/TravelTable";
+import PrivateRoute from "./ProtectedRoutes/PrivateRoute";
+import { TravelFormPage } from "./pages/TravelFormPage";
+import { TravelTablePage } from "./pages/TravelTablePage";
 
 const App = () => {
-  const selectedDataConfirmed = useAppSelector(
-    (state) => state.travelsForm.selectedDataConfirmed
-  );
-
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -17,9 +15,20 @@ const App = () => {
 
   return (
     <div>
-      {!selectedDataConfirmed && <TravelForm />}
+      <Routes>
+        <Route path="/" element={<TravelFormPage />} />
 
-      {selectedDataConfirmed && <TravelTable />}
+        <Route
+          path="/table"
+          element={
+            <PrivateRoute>
+              <TravelTablePage />
+            </PrivateRoute>
+          }
+        />
+
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 };

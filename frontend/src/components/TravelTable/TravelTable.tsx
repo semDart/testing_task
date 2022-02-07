@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { getSelectedData } from "../../selectors";
 import {
@@ -82,6 +83,7 @@ const TravelTable = () => {
   const selectedData = useAppSelector(getSelectedData);
 
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   const handleBackButtonClick = () => {
     const userResponse = window.confirm(
@@ -90,6 +92,7 @@ const TravelTable = () => {
 
     if (userResponse) {
       dispatch(resetSelectedData());
+      navigate("/");
     }
   };
 
