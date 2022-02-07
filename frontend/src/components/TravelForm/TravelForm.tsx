@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   saveSelectedData,
   separateDataByProperty,
@@ -102,6 +102,13 @@ const TravelForm = () => {
   return (
     <div className={classes.main_container}>
       <h1 className={classes.form_title}>Pick data you want to see</h1>
+      <p className={classes.form_description}>
+        You can also visit our
+        <Link to="/table" className={classes.description_link}>
+          Table
+        </Link>
+        with all data we have for now
+      </p>
 
       <form onSubmit={handleSubmitForm} className={classes.form_container}>
         <Autocomplete
