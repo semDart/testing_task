@@ -6,7 +6,21 @@ export const useStyles = makeStyles({
   },
   form_title: {
     marginTop: "50px",
-    marginBottom: "50px",
+    marginBottom: "20px",
+  },
+  form_description: {
+    fontSize: "20px",
+    fontStyle: "italic",
+  },
+  description_link: {
+    padding: "3px 8px",
+    marginLeft: "5px",
+    marginRight: "5px",
+    textDecoration: "none",
+    fontWeight: "500",
+    borderRadius: "10px",
+    color: "inherit",
+    backgroundColor: "lightblue",
   },
   form_container: {
     display: "flex",
