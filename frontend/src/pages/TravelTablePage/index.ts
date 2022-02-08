@@ -1,1 +1,1 @@
-export { default as TravelTablePage } from './TravelTablePage';
+export { TravelTablePage } from './TravelTablePage';
